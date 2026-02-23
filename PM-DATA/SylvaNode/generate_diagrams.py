@@ -8,10 +8,10 @@ Spatial Profitability.
 
 import seaborn as sns  # isort: skip
 import matplotlib.pyplot as plt  # isort: skip
-import importlib.util
 import os
-import subprocess
 import sys
+import subprocess
+import importlib.util
 
 import numpy as np
 
