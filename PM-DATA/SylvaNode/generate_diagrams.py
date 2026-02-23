@@ -5,31 +5,13 @@ Generates mathematically precise graphs modeling Neural Network convergence,
 PINN Aerodynamic Draft, APTI Accumulation, Carbon Credit ROI, and
 Spatial Profitability.
 """
-import seaborn as sns
-import matplotlib.pyplot as plt
-import importlib.util
 import os
-import subprocess
-import sys
 
+import matplotlib.pyplot as plt
 import numpy as np
+import seaborn as sns
 
-
-def _install_deps():
-    """Install visualizing dependencies if missing."""
-    has_mpl = importlib.util.find_spec("matplotlib") is not None
-    has_sns = importlib.util.find_spec("seaborn") is not None
-    if not has_mpl or not has_sns:
-        subprocess.check_call(
-            [sys.executable, "-m", "pip", "install", "matplotlib", "seaborn"]
-        )
-
-
-_install_deps()
-
-# isort: off
 # pylint: disable=wrong-import-position
-# isort: on
 
 # Professional 6-Sigma aesthetics
 plt.style.use('dark_background')
