@@ -5,13 +5,12 @@ Generates mathematically precise graphs modeling Neural Network convergence,
 PINN Aerodynamic Draft, APTI Accumulation, Carbon Credit ROI, and
 Spatial Profitability.
 """
-
-import seaborn as sns  # isort: skip
-import matplotlib.pyplot as plt  # isort: skip
-import os
-import sys
-import subprocess
+import seaborn as sns
+import matplotlib.pyplot as plt
 import importlib.util
+import os
+import subprocess
+import sys
 
 import numpy as np
 
@@ -28,7 +27,9 @@ def _install_deps():
 
 _install_deps()
 
+# isort: off
 # pylint: disable=wrong-import-position
+# isort: on
 
 # Professional 6-Sigma aesthetics
 plt.style.use('dark_background')
