@@ -49,21 +49,21 @@ _Note: True "hazardousness" or "toxicity" is rarely measured directly as a singl
 
 ---
 
-## ✅ Local CSV Downloads Verification
+## Local CSV Downloads Verification
 
 I have successfully downloaded robust, massive proxy CSV datasets representing the major open-source providers mentioned above into your local `PM-DATA/sample_datasets` folder. These files are ready for data integration and statistical baselining in your paper:
 
-1.  **EPA AirData Network:**
-    - **File:** `daily_88101_2022/daily_88101_2022.csv`
-    - **Size:** ~286 MB
-    - **Description:** The complete Daily Summary PM2.5 FRM/FEM mass data from all United States EPA monitoring stations for a full year. Perfect for massive statistical distribution tests.
-2.  **Asian / Indian Cities Air Quality Proxy (Relevant to Bikaner/Delhi Studies):**
-    - **File:** `indian_cities_pm25_proxy.csv`
-    - **Size:** ~2.5 MB
-    - **Description:** Daily PM2.5 and related parameters from major cities in India (2015-2020), highly relevant to the geographic focus of your APTI studies.
-3.  **Beijing PM2.5 High-Resolution Data:**
-    - **File:** `beijing_hourly_pm25.csv`
-    - **Size:** ~2.8 MB
-    - **Description:** National-level controlled hourly air pollutants proxy.
-4.  **Download Script (Automated):**
-    - The retrieval pipeline has been encoded into `PM-DATA/download_all_csvs.py` for fully automated deployment in the future.
+1. **EPA AirData Network:**
+   - **File:** `daily_88101_2022/daily_88101_2022.csv`
+   - **Size:** ~286 MB
+   - **Description:** The complete Daily Summary PM2.5 FRM/FEM mass data from all United States EPA monitoring stations for a full year. Perfect for massive statistical distribution tests.
+2. **Asian / Indian Cities Air Quality Proxy (Relevant to Bikaner/Delhi Studies):**
+   - **File:** `indian_cities_pm25_proxy.csv`
+   - **Size:** ~2.5 MB
+   - **Description:** Daily PM2.5 and related parameters from major cities in India (2015-2020), highly relevant to the geographic focus of your APTI studies.
+3. **Beijing PM2.5 High-Resolution Data:**
+   - **File:** `beijing_hourly_pm25.csv`
+   - **Size:** ~2.8 MB
+   - **Description:** National-level controlled hourly air pollutants proxy.
+4. **Download Script (Automated):**
+   - The retrieval pipeline has been encoded into `PM-DATA/download_all_csvs.py` for fully automated deployment in the future.
