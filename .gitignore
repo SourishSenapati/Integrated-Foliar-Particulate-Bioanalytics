@@ -1,0 +1,3 @@
+# Ignore downloaded heavy CSV datasets
+PM-DATA/sample_datasets/
+__pycache__/
