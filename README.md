@@ -1,32 +1,30 @@
 # Integrated Foliar Particulate Bioanalytics
 
-**Topic Focus:** _Comparison of particulate matter monitoring potential of some established plant biomonitors_
+This repository contains code, datasets, and analysis scripts for evaluating how effectively different plant species act as biomonitors for particulate matter (PM).
 
-## Overview
+Our work bridges empirical Air Pollution Tolerance Index (APTI) data with computational modeling (PINNs) to simulate PM dispersion and calculate the financial viability of biological air filters (SylvaNode).
 
-This repository contains a comprehensive data-driven research framework analyzing the particulate matter (PM) accumulation capacities and Air Pollution Tolerance Index (APTI) thresholds of established plant biomonitors. The project integrates empirical data extracted directly from peer-reviewed literature with macro-level environmental datasets to provide a rigorous, analytical foundation for comparative biomonitoring research.
+## Repository Overview
 
-## Repository Structure
+- **`established_biomonitor_quantitative_data.md`**: Raw empirical data mapping APTI scores to PM mass accumulation ($g/m^2$). Extracted directly from primary literature.
+- **`verified_dois.md`**: Master list of DOIs for the peer-reviewed papers we used to source our baseline metrics.
+- **`research_gaps.md` & `novel_unwritten_research_gaps.md`**: Notes and identified constraints in current biomonitoring methods, highlighting areas like ultrafine particle capture and saturation limits.
+- **`business_and_scalability.md`**: Economic modeling for spatial deployment. Includes scaling costs, verified carbon credit (VCC) revenue projections, and ESG compliance calculations.
 
-### 1. Core Research Data
+## Code and Modeling (`PM-DATA/`)
 
-- **`established_biomonitor_quantitative_data.md`**: Contains precisely verified empirical data mapping APTI scores against quantitative PM mass accumulation ($g/m^2$) for diverse plant species. All values are sourced directly from primary academic literature.
-- **`verified_dois.md`**: A curated registry of Digital Object Identifiers (DOIs) for key peer-reviewed literature forming the theoretical basis of the project.
-- **`research_gaps.md`**: Extracted literature gaps highlighting constraints in current biomonitoring methodologies.
-- **`novel_unwritten_research_gaps.md`**: Synthesized, high-potential research vectors regarding biomonitor saturation thresholds, ultrafine particle interaction, and micro-climatic urban influences that remain unaddressed in current academic discourse.
+We've built tools to pull open-source air quality data and generate high-resolution models locally.
 
-### 2. Environmental Datasets (`PM-DATA/`)
+- **`fetch_pm_data.py` / `download_all_csvs.py`**: Automated pipelines for pulling large EPA AirData and OpenAQ datasets. Be aware that running these might require significant local storage.
+- **`PM_Parameters_Reference.md` / `pm_open_source_datasets.md`**: Catalogs of physical PM parameters and index of related open-source databases.
+- **`SylvaNode/generate_diagrams.py`**: This script models PM dispersion aerodynamics and projects carbon credit ROIs based on the APTI benchmarks. It outputs 600 DPI charts into `PM-DATA/SylvaNode/diagrams/`.
+  - To run the models locally: `python PM-DATA/SylvaNode/generate_diagrams.py`
+  - _Dependencies_: `numpy`, `matplotlib`, `seaborn`
 
-- **`PM_Parameters_Reference.md`**: An exhaustive catalog of physical, chemical, and operational parameters for structural Particulate Matter (e.g., fractional sizes, source vectors, material hardness).
-- **`pm_open_source_datasets.md`**: Index of the major open-source data platforms (EPA, NASA, Copernicus) supporting particulate measurements.
-- **Automation Scripts**:
-  - `download_all_csvs.py`: Automated retrieval pipeline for acquiring multi-gigabyte open-source datasets (EPA AirData, OpenAQ, geographic proxies) into the local environment for heavy statistical analysis.
-  - `fetch_pm_data.py`: Base functions for EPA API connectivity and repository parsing.
+## Data Verification Note
 
-## Methodology Note
-
-All core benchmark values contained in the quantitative reference tables have been explicitly verified by the primary author through direct access to the original publisher PDFs, ensuring zero-deviation accuracy for academic benchmarking.
+All baseline metrics in the reference tables were manually verified against the original publisher PDFs. If you find any discrepancies, please open an issue with the DOI and page number.
 
 ## License
 
-Refer to the standard Apache 2.0 license provided in the root directory.
+Apache 2.0. See the `LICENSE` file for details.
