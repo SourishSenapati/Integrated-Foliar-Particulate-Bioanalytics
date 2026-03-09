@@ -1,3 +1,5 @@
 # Ignore downloaded heavy CSV datasets
 PM-DATA/sample_datasets/
 __pycache__/
+
+Bioindicators  the natural indicator of environmental pollution.pdf
